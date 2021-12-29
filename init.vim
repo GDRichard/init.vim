@@ -72,18 +72,21 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-prettier',
   \ 'coc-graphql',
+  \ 'coc-solargraph',
   \ ]
 
-" misc
+" everything else
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
 set termguicolors     " enable true colors support
 let ayucolor="dark"
 syntax on
-colorscheme ayu
+colorscheme gruvbox
+set background=dark
 
 let mapleader = " "
 
