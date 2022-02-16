@@ -39,13 +39,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 
 " javascript/typescript/react
-" Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" Plug 'jparise/vim-graphql'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'yuezk/vim-js'
-" Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'sheerun/vim-polyglot'
 
 " nerdtree
@@ -70,27 +64,28 @@ let g:coc_global_extensions = [
   \ 'coc-html-css-support',
   \ 'coc-json',
   \ 'coc-tsserver',
-  \ 'coc-prettier',
   \ 'coc-graphql',
   \ 'coc-solargraph',
+  \ 'coc-jedi',
   \ ]
 
 " everything else
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 call plug#end()
 
 set termguicolors     " enable true colors support
 let ayucolor="dark"
 syntax on
-colorscheme gruvbox
+colorscheme ayu
 set background=dark
 
 let mapleader = " "
 
-nnoremap <leader>pv :Vex<CR>
+inoremap jk <Esc>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <leader>gf :Telescope git_files<CR>
 nnoremap <leader>lg :Telescope live_grep<CR>
